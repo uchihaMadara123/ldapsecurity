@@ -1,0 +1,49 @@
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: springframework
+
+dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=Sakshi.Verma,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Sakshi Verma
+sn: Verma
+uid: Sakshi0901
+userPassword: $2a$12$VrdW9hjxhiXS7S7Xg.Bg.eD9mM69F9JWrKWHLY9vfJshLP4iRBKuC
+
+dn: uid=Dinesh.Mehra,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Dinesh Mehra
+sn: Mehra
+userPassword: $2a$12$bzJmhufyS4hVXz/pSjNwz.IWTLjHB8XzjuSby3oM78ZInC4JopT0q
+
+
+dn: cn=humanResource,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: human_resource
+ou: HR
+uniqueMember: uid=Sakshi.Verma,ou=people,dc=springframework,dc=org
+
+dn: cn=managers,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: manager
+ou: manager
+uniqueMember: uid=Dinesh.Mehra,ou=people,dc=springframework,dc=org
